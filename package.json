@@ -1,0 +1,22 @@
+{
+  "name": "twig-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.6.1",
+    "browser-sync": "^3.0.4",
+    "del": "^6.1.1",
+    "gulp": "^5.0.1",
+    "gulp-postcss": "^10.0.0",
+    "gulp-sass": "^6.0.1",
+    "gulp-twig": "^1.0.0",
+    "sass": "^1.104.1"
+  }
+}
