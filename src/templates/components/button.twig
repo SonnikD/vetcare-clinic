@@ -1,0 +1,8 @@
+{% if href %}
+    <a class="button button--{{ variant }}" href="{{ href }}">{{ text }}</a>
+{% else %}
+    <button class="button button--{{ variant }}" type="{{ type|default('button') }}">
+        {{ text }}
+    </button>
+{% endif %}
+
