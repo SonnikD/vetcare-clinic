@@ -1,0 +1,88 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.booking {
+  @include mixins.card($radius: variables.$radius-lg, $hover: false);
+
+  padding: variables.$space-2xl;
+
+  &__form {
+    padding-top: variables.$space-xl;
+  }
+  &__title {
+    padding-bottom: variables.$space-sm;
+    padding-right: variables.$space-3xl;
+  }
+
+  &__description {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-body;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: variables.$space-lg;
+
+    @include mixins.respond("mobile") {
+      grid-template-columns: 1fr;
+      column-gap: variables.$space-sm;
+    }
+  }
+
+  &__field {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$space-sm;
+    padding-bottom: variables.$space-lg;
+  }
+
+  &__label {
+    font-size: variables.$text-xs;
+    font-weight: 600;
+    color: variables.$color-text-body;
+    text-transform: uppercase;
+  }
+
+  &__input,
+  &__select,
+  &__textarea {
+    padding: variables.$space-lg variables.$space-md;
+    background-color: variables.$color-bg-muted;
+    border: 1px solid variables.$color-border-default;
+    border-radius: variables.$radius-sm;
+    font-size: variables.$text-sm;
+    font-family: inherit;
+
+    &:focus-visible {
+      border: 1px solid variables.$color-border-accent;
+      background-color: variables.$color-bg-surface;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__textarea {
+    resize: vertical;
+    min-height: 100px;
+    max-height: 300px;
+  }
+
+  &__note {
+    font-size: variables.$text-xs;
+    font-weight: 300;
+    color: variables.$color-text-muted;
+    padding-top: variables.$space-lg;
+    text-align: center;
+
+    &-link {
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}

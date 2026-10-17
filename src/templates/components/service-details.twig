@@ -1,0 +1,61 @@
+<article class="service-details">
+    <div class="service-details__header">
+        <img class="service-details__image" src="{{ img }}" alt="{{ title }}" loading="lazy">
+
+        <div class="service-details__caption">
+            <span class="service-details__tag">{{ tag }}</span>
+            <h2 class="service-details__title">{{ title }}</h2>
+        </div>
+    </div>
+    
+    <div class="service-details__content">
+      
+        <div class="service-details__summary">
+            <div class="service-details__price">
+                <div class="service-details__price-icon">
+                    {% include "components/icon.twig" with {name: "dollar", class: "service-details__price-svg"} %}
+                </div>
+
+                <div class="service-details__price-info">
+                    <span class="service-details__price-label">Стоимость</span>
+                    <span class="service-details__price-value">от {{ price }} ₽</span>
+                </div>
+            </div>
+            <div class="service-details__duration">
+                <div class="service-details__duration-icon">
+                    {% include "components/icon.twig" with {name: "clock", class: "service-details__duration-svg"} %}
+                </div>
+                <div class="service-details__duration-info">
+                    <span class="service-details__duration-label">Длительность</span>
+                    <span class="service-details__duration-value">{{ duration }}</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-details__body">
+            <h3 class="service-details__subtitle">Описание процедуры</h3>
+            <p class="service-details__text">{{ details }}</p>
+
+            <h3 class="service-details__subtitle">Что входит в услугу</h3>
+            <ul class="service-details__list">
+                {% for item in includes %}
+                    <li class="service-details__list-item">
+                        <div class="service-details__list-icon">
+                            {% include "components/icon.twig" with {name: "check", class: "service-details__list-svg"} %}
+                        </div>
+                        <span class="service-details__list-text">{{ item }}</span>
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <div class="service-details__footer">
+            {% include "components/button.twig" with {
+                variant: "primary",
+                text: "Записаться на приём",
+                icon: "calendar",
+                href: "contacts.html#booking"
+            }   %}
+        </div>
+    </div>
+</article>

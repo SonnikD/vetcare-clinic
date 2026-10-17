@@ -1,0 +1,60 @@
+<section class="information">
+    <h2 class="information__title">Информация о клинике</h2>
+    <ul class="information__list">
+                   
+        <li class="information__list-item">
+            <div class="information__list-icon">
+                {% include "components/icon.twig" with {name: "phone"} %}
+            </div>
+            <div class="information__list-content">       
+                <span class="information__list-label">Телефон</span>
+                <a class="information__list-value" href="tel:+70000000000">+7 (000) 000-00-00</a>
+            </div>
+        </li>
+        <li class="information__list-item">
+            <div class="information__list-icon">
+                {% include "components/icon.twig" with {name: "mail"} %}
+            </div>
+            <div class="information__list-content">
+                <span class="information__list-label">Электронная почта</span>
+                <a class="information__list-value" href="mailto:info@example.ru">info@example.ru</a>
+            </div>
+        </li>
+        <li class="information__list-item">
+            <div class="information__list-icon">
+                {% include "components/icon.twig" with {name: "map"} %}
+            </div>
+            <div class="information__list-content">
+                <span class="information__list-label">Адрес клиники</span>
+                <p class="information__list-value">г. Ваш город, ул. Примерная, 1</p>
+            </div>
+        </li>
+        <li class="information__list-item">
+            <div class="information__list-icon">
+                {% include "components/icon.twig" with {name: "clock"} %}
+            </div>
+            <div class="information__list-content">
+                <span class="information__list-label">Режим работы</span>
+                <p class="information__list-value">Ежедневно и круглосуточно: 24/7</p>
+            </div>
+        </li>
+    </ul>
+
+    <div class="information__footer">
+        <span class="information__footer-label">Мы в мессенджерах</span>
+        <div class="information__actions">
+            {% include "components/button.twig" with {
+                        variant: "muted",
+                        text: "Telegram",
+                        icon: 'telegram',
+                        href: '#'
+                    }  %}
+            {% include "components/button.twig" with {
+                        variant: "muted",
+                        text: "ВКонтакте",
+                        icon: 'vk',
+                        href: '#'
+                    }  %}
+        </div>
+    </div>
+</section>

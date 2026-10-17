@@ -1,0 +1,64 @@
+<section class="booking" id="booking">
+    <h2 class="booking__title">Форма записи на приём</h2>
+    <p class="booking__description">Укажите ваши контакты и выберите желаемую услугу. Мы перезвоним для согласования времени.</p>
+                
+    <form class="booking__form" action="submit" method="post"> 
+        <div class="booking__fields">
+            <div class="booking__field">
+                <label class="booking__label" for="userName">Ваше имя *</label>
+                <input class="booking__input" id="userName" name="userName" type="text" required placeholder="Иван Иванов">
+            </div>
+            <div class="booking__field">
+                <label class="booking__label" for="phone">Номер телефона *</label>
+                <input class="booking__input" id="phone" name="phone" type="tel" required placeholder="+7 (___) ___-__-__">
+            </div>
+                   
+            <div class="booking__field">
+                <label class="booking__label" for="pet">Вид питомца</label>
+                <select class="booking__select" id="pet" name="pet">
+                    <option value="dog" selected>Собака</option>
+                    <option value="cat">Кошка</option>
+                    <option value="rodent">Грызун / Кролик</option>
+                    <option value="bird">Птица / Экзотика</option>
+                    <option value="other">Другой питомец</option>
+                </select>
+            </div>
+
+            <div class="booking__field">
+                <label class="booking__label" for="service">Услуга</label>
+                <select class="booking__select" id="service" name="service">
+                    <option value="vaccination">Вакцинация и чипирование (от 1800₽)</option>
+                    <option value="grooming">Гигиенический уход и стрижка (от 2200₽)</option>
+                    <option value="ultrasound">УЗИ и экспертная диагностика (от 2500₽)</option>
+                    <option value="dentistry">Ветеринарная стоматология (от 2900₽)</option>
+                    <option value="surgery">Малоинвазивная хирургия (от 4500₽)</option>
+                    <option value="therapy">Терапевтический приём (от 1500₽)</option>
+                    <option value="duty" selected>Консультация дежурного врача</option>
+                </select>
+            </div>
+        </div>
+        <div class="booking__field">
+            <label class="booking__label" for="date">Желаемая дата приёма</label>
+            <input class="booking__input" id="date" name="date" type="date" required>
+        </div>
+
+        <div class="booking__field">
+            <label class="booking__label" for="comment">Комментарий или жалобы</label>
+            <textarea class="booking__textarea" name="comment" id="comment" placeholder="Опишите симптомы, породу питомца или удобное время для звонка..."></textarea> 
+        </div>
+                                    
+        {% include "components/button.twig" with {
+            variant: "primary",
+            text: "Отправить заявку на приём",
+            icon: 'calendar',
+            type: "submit",
+            full_width: true,
+            large: true
+        } %}
+    </form>
+
+    <p class="booking__note">
+        Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с
+        <a class="booking__note-link" href="privacy" target="_blank" rel="noopener">политикой конфиденциальности</a>.
+    </p>            
+</section>

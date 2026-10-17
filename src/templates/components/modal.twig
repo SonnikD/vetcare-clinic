@@ -1,0 +1,8 @@
+<dialog class="modal" id="{{ id }}" aria-label="{{ label }}">
+    <div class="modal__inner">
+        <button class="modal__close" type="button" aria-label="Закрыть">
+            {% include "components/icon.twig" with { name: "close", class: "modal__icon" } %}
+        </button>
+        {% block content %}{% endblock %}
+    </div>
+</dialog>
