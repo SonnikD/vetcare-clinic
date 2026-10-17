@@ -1,0 +1,48 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.feature-card {
+  @include mixins.card(variables.$color-bg-page);
+
+  padding: variables.$space-xl;
+
+  &__icon {
+    @include mixins.icon-box;
+  }
+
+  &__content {
+    padding: variables.$space-xl 0 variables.$space-lg 0;
+  }
+
+  &__title {
+    font-size: variables.$text-lg;
+    color: variables.$color-text-primary;
+    padding-bottom: variables.$space-sm;
+  }
+
+  &__description {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+  }
+
+  &__badge {
+    display: flex;
+    margin-top: auto;
+    gap: variables.$space-xs;
+    padding-top: variables.$space-lg;
+    border-top: 1px solid variables.$color-divider;
+
+    &-text {
+      font-size: variables.$text-xs;
+      font-weight: 600;
+      color: variables.$color-text-secondary;
+    }
+
+    svg {
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+      color: variables.$color-text-secondary;
+    }
+  }
+}

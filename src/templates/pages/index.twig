@@ -1,3 +1,58 @@
 {% extends "layouts/base.twig" %}
 {% block page %}
+    <section class="hero">
+        <div class="container">
+            <div class="hero__inner">
+                <div class="hero__content">
+                    <h1 class="hero__title">Заботливая ветеринарная помощь для ваших питомцев</h1>
+                    <p class="hero__description">Круглосуточный приём, бережная диагностика и лечение собак, кошек и мелких животных без стресса и боли.</p>
+
+                    <div class="hero__actions">
+                        {% include "components/button.twig" with {
+                    variant: "primary",
+                    text: "Записаться на приём",
+                    href: "contacts.html",
+                    icon: 'calendar',
+                    large: true,
+                    attrs: {"data-modal-open": "booking-modal"},
+                }  %}  
+
+                        {% include "components/button.twig" with {
+                    variant: "secondary",
+                    text: "Наши услуги",
+                    href: "services.html",
+                    icon: 'arrow',
+                    icon_right: true,
+                    large: true
+                }  %}            
+                    </div>
+
+                    <div class="hero__stats">
+                        {% include "components/stat-item.twig" with {
+                    value: "24/7",
+                    label: "Без выходных"
+                }  %}
+                        {% include "components/stat-item.twig" with {
+                    value: "14+ лет",
+                    label: "Опыт врачей"
+                }  %}
+                        {% include "components/stat-item.twig" with {
+                    value: "100%",
+                    label: "Без стресса"
+                }  %}
+                    </div>
+                </div>
+
+                <div class="hero__media">
+                    <img class="hero__media-picture" src="img/photos/hero_dog.webp" alt="Ветеринар осматривает собаку" fetchpriority="high">
+                    <div class="hero__media-caption">
+                        {% include "components/icon.twig" with {
+                    name: 'safety'
+                }  %}
+                        Индивидуальный план наблюдения каждого пациента
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </section>
 {% endblock %}

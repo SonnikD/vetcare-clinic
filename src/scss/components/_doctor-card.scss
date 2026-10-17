@@ -1,0 +1,113 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.doctor-card {
+  @include mixins.card(variables.$color-bg-page);
+  overflow: hidden;
+
+  &:hover {
+    .doctor-card__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: variables.$space-xl;
+  }
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    @include mixins.transition(transform);
+
+    width: 100%;
+    height: 288px;
+    object-fit: cover;
+  }
+
+  &__experience {
+    @include mixins.overlay-badge();
+
+    position: absolute;
+    white-space: nowrap;
+    gap: variables.$space-xs;
+    top: variables.$overlay-offset;
+    right: variables.$overlay-offset;
+
+    svg {
+      flex-shrink: 0;
+      color: variables.$color-icon-brand;
+      width: variables.$icon-xs;
+      height: variables.$icon-xs;
+    }
+  }
+
+  &__name {
+    font-size: variables.$text-xl;
+    color: variables.$color-text-primary;
+    padding-bottom: variables.$space-sm;
+  }
+
+  &__specialty {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-secondary;
+    padding-bottom: variables.$space-md;
+  }
+
+  &__description {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+    padding-bottom: variables.$space-lg;
+  }
+
+  &__education {
+    display: flex;
+    gap: variables.$space-sm;
+    background-color: variables.$color-bg-surface;
+    border-radius: variables.$radius-sm;
+    padding: variables.$space-md;
+    border: 1px solid variables.$color-border-default;
+
+    &-text {
+      font-size: variables.$text-xs;
+      font-weight: 300;
+      color: variables.$color-text-body;
+    }
+
+    svg {
+      color: variables.$color-text-secondary;
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+      flex-shrink: 0;
+    }
+  }
+
+  &__specializations {
+    display: flex;
+    flex-wrap: wrap;
+    gap: variables.$space-sm;
+    padding: variables.$space-md 0 variables.$space-lg 0;
+  }
+
+  &__specialization {
+    padding: variables.$space-xs variables.$space-sm;
+    border: 1px solid variables.$color-border-default;
+    border-radius: variables.$radius-xs;
+    font-size: variables.$text-xs;
+    font-weight: 500;
+    color: variables.$color-text-body;
+  }
+
+  &__footer {
+    margin-top: auto;
+    padding-top: variables.$space-lg;
+    border-top: 1px solid variables.$color-divider;
+  }
+}

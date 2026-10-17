@@ -1,0 +1,105 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.review-card {
+  @include mixins.card;
+
+  padding: variables.$space-xl;
+
+  &__client {
+    display: flex;
+    align-items: center;
+    gap: variables.$space-md;
+  }
+
+  &__image {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+    border: 2px solid variables.$color-border-accent;
+  }
+
+  &__content {
+    padding: variables.$space-xl 0 variables.$space-lg 0;
+  }
+
+  &__author {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: variables.$space-sm;
+    font-size: variables.$text-base;
+    font-weight: 700;
+    color: variables.$color-text-primary;
+    padding-bottom: variables.$space-sm;
+
+    svg {
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+      color: variables.$color-icon-brand;
+    }
+  }
+
+  &__pet {
+    font-size: variables.$text-xs;
+    font-weight: 500;
+    color: variables.$color-text-secondary;
+  }
+
+  &__rating {
+    display: flex;
+    gap: variables.$space-xs;
+
+    svg {
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+      color: variables.$color-icon-accent;
+    }
+  }
+
+  &__text {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+    font-style: italic;
+    padding-top: variables.$space-lg;
+  }
+
+  &__footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: variables.$space-lg;
+    border-top: 1px solid variables.$color-divider;
+    margin-top: auto;
+  }
+
+  &__date {
+    font-size: variables.$text-xs;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+  }
+
+  &__badge {
+    display: flex;
+    gap: variables.$space-xs;
+
+    &-label {
+      font-size: variables.$text-xs;
+      font-weight: 500;
+      color: variables.$color-text-secondary;
+    }
+
+    svg {
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+      color: variables.$color-icon-brand;
+    }
+  }
+}

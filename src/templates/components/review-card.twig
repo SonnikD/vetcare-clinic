@@ -1,0 +1,28 @@
+<figure class="review-card">
+    <figcaption class="review-card__client">
+        <img class="review-card__image" src="{{ img }}" alt="{{ name }}" loading="lazy">
+
+        <div class="review-card__author">
+            <span class="review-card__name">{{ name }}{% include "components/icon.twig" with { name: "feature" } %}</span>
+     
+            <span class="review-card__pet">{{ pet }}</span>
+        </div>
+    </figcaption>
+
+    <div class="review-card__content">
+        <div class="review-card__rating" role="img" aria-label="Оценка: 5 из 5">
+            {% for i in 1..5 %}
+                {% include "components/icon.twig" with { name: 'star' } %}
+            {% endfor %}
+        </div>
+        <blockquote class="review-card__text">«{{ text }}»</blockquote>
+    </div>
+
+    <div class="review-card__footer">
+        <span class="review-card__date">{{ date }}</span>
+        <div class="review-card__badge">
+            {% include "components/icon.twig" with { name: "logo" } %}
+            <span class="review-card__badge-label">Довольный пациент</span>
+        </div>
+    </div>
+</figure>

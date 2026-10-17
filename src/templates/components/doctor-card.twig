@@ -1,0 +1,36 @@
+<article class="doctor-card">
+    <div class="doctor-card__media">
+        <img class="doctor-card__image" src="{{ img }}" alt="{{ name }}" loading="lazy">
+        <div class="doctor-card__experience">
+            {% include "components/icon.twig" with { name: "award" } %} 
+            <span class="doctor-card__experience-text">Стаж {{ experience }} лет</span>
+        </div>
+    </div>
+
+    <div class="doctor-card__content">
+        <h2 class="doctor-card__name">{{ name }}</h2>
+        <span class="doctor-card__specialty">{{ specialty }}</span>
+        <p class="doctor-card__description">{{ description }}</p>
+
+        <div class="doctor-card__education">
+            {% include "components/icon.twig" with { name: "university" } %}
+            <span class="doctor-card__education-text">{{ education }}</span>
+        </div>
+
+        <ul class="doctor-card__specializations">
+            {% for specialization in specializations %}
+                <li class="doctor-card__specialization">{{ specialization }}</li>
+            {% endfor %}
+        </ul>
+
+        <div class="doctor-card__footer">
+            {% include "components/button.twig" with {
+                variant: "primary",
+                text: "Записаться к доктору",
+                icon: "calendar",
+                attrs: {"data-modal-open": "booking-modal"},
+                full_width: true
+            }  %}
+        </div>
+    </div>
+</article>

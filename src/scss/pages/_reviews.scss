@@ -1,0 +1,11 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.reviews {
+  @include mixins.section-spacing;
+  background-color: variables.$color-bg-page;
+
+  &__cards {
+    @include mixins.grid-card($columns: 3);
+  }
+}

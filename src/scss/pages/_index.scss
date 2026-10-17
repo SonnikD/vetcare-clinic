@@ -1,0 +1,105 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.hero {
+  @include mixins.section-spacing;
+
+  &__inner {
+    @include mixins.grid-card(
+      $columns: 2,
+      $columns-tablet: 1,
+      $gap: variables.$space-3xl
+    );
+    align-items: center;
+
+    @include mixins.respond("tablet") {
+      gap: variables.$space-lg;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$space-xl;
+  }
+
+  &__title {
+    font-size: clamp(1.875rem, 0.75rem + 2.8125vw, 3rem);
+    font-weight: 800;
+    max-width: 17ch;
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+
+  &__description {
+    font-size: variables.$text-lg;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+
+    @include mixins.respond("mobile") {
+      font-size: variables.$text-base;
+    }
+  }
+
+  &__media {
+    position: relative;
+    border-radius: variables.$radius-lg;
+    border: 4px solid variables.$color-bg-surface;
+    box-shadow: variables.$shadow-card;
+
+    &-picture {
+      border-radius: variables.$radius-lg;
+      height: 440px;
+      width: 100%;
+
+      object-fit: cover;
+
+      @include mixins.respond("tablet") {
+        height: 400px;
+      }
+
+      @include mixins.respond("mobile") {
+        height: 320px;
+      }
+    }
+
+    &-caption {
+      position: absolute;
+      display: flex;
+      gap: variables.$space-sm;
+      padding: variables.$space-sm variables.$space-md;
+      bottom: 16px;
+      left: 16px;
+      right: 16px;
+      font-size: variables.$text-sm;
+      font-weight: 500;
+      color: variables.$color-text-inverse;
+      background-color: variables.$color-bg-overlay-dark;
+      border-radius: variables.$radius-sm;
+      backdrop-filter: blur(variables.$blur-overlay);
+
+      svg {
+        width: variables.$icon-sm;
+        height: variables.$icon-sm;
+        color: variables.$color-icon-brand;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: variables.$space-md;
+    border-bottom: 1px solid variables.$color-border-default;
+    padding-bottom: variables.$space-xl;
+
+    @include mixins.respond("mobile") {
+      flex-direction: column;
+    }
+  }
+
+  &__stats {
+    display: flex;
+    justify-content: space-around;
+  }
+}

@@ -1,0 +1,26 @@
+{% extends "layouts/base.twig" %}
+{% set features = [
+    { title: "Опытные врачи-эксперты", description: "Регулярная международная стажировка, узкие специализации и бережное отношение без стресса для животных.", icon: "award" },
+    { title: "Современное оборудование", description: "Цифровой рентген, УЗИ экспертного класса, ингаляционная анестезия и собственная экспресс-лаборатория.", icon: "microscope" },
+    { title: "Круглосуточный приём", description: "Работаем без выходных и праздников 24/7. Готовы принять питомца в любое время дня и ночи.", icon: "clock" },
+    { title: "Принцип «Fear Free»", description: "Специальные зоны ожидания для кошек и собак, мягкая фиксация и позитивное подкрепление лакомствами.", icon: "heart-handshake" },
+] %}
+
+{% block title %}О клинике{% endblock %}
+{% block page %}
+    <section class="about">
+        <div class="container">
+            {% include "components/section-heading.twig" with {
+            label:"О нашей клинике",
+            title: "Медицинский подход с уважением к чувствам питомца",
+            description: "VetCare — это современная ветеринарная клиника бережной медицины, которая объединяет экспертную диагностику, щадящую терапию и искреннюю заботу о каждом питомце."
+        }  %}
+
+            <div class="about__cards">
+                {% for feature in features %}
+                    {% include "components/feature-card.twig" with feature %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

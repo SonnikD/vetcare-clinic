@@ -1,0 +1,42 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.cta-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: variables.$color-bg-accent;
+  padding: variables.$space-2xl;
+  border-radius: variables.$radius-lg;
+  flex-wrap: wrap;
+
+  @include mixins.respond("tablet") {
+    flex-direction: column;
+    justify-content: center;
+    gap: variables.$space-lg;
+    padding: variables.$space-xl;
+  }
+
+  &__info {
+    text-align: left;
+
+    @include mixins.respond("tablet") {
+      text-align: center;
+    }
+
+    &-title {
+      font-size: variables.$text-2xl;
+      padding-bottom: variables.$space-sm;
+      color: variables.$color-text-inverse;
+    }
+
+    &-description {
+      max-width: 56ch;
+      text-wrap: balance;
+      font-weight: 300;
+      font-size: variables.$text-base;
+      color: variables.$color-text-accent;
+      line-height: 1.5;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.services {
+  @include mixins.section-spacing;
+  background-color: variables.$color-bg-page;
+
+  &__tags {
+    @include mixins.flex-center;
+    gap: variables.$space-md;
+    flex-wrap: wrap;
+  }
+
+  &__cards {
+    @include mixins.grid-card($columns: 3);
+    padding: variables.$space-2xl 0;
+  }
+}

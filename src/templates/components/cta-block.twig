@@ -1,0 +1,13 @@
+<section class="cta-block">
+    <div class="cta-block__info">
+        <h2 class="cta-block__info-title">{{ title }}</h2>
+        <p class="cta-block__info-description"> {{ description }}</p>
+    </div>
+    {% include "components/button.twig" with {
+        variant: "primary",
+        text: button,
+        icon: 'arrow',
+        attrs: {"data-modal-open": "booking-modal"},
+        large: true
+    } %}
+</section>

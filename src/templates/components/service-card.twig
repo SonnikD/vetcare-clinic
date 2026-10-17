@@ -1,0 +1,34 @@
+{% set attrs = attrs|default({}) %}
+
+<article
+    class="service-card"
+    {% for key, value in attrs %}
+    {{ key }}="{{ value }}"
+    {% endfor %}
+>
+    <div class="service-card__media">
+        <img class="service-card__image" src="{{ img }}" alt="{{ title }}" loading="lazy">
+        <span class="service-card__tag">{{ tag }}</span>
+        <span class="service-card__duration">{{ duration }}</span>
+    </div>
+
+    <div class="service-card__content">
+        <h2 class="service-card__title">{{ title }}</h2>
+        <p class="service-card__description">{{ description }}</p>
+
+        <div class="service-card__footer">
+            <div class="service-card__price">
+                <span class="service-card__price-label">Стоимость:</span>
+                <span class="service-card__price-value">от {{ price }} ₽</span>
+            </div>
+
+            {% include "components/button.twig" with {
+                variant: "muted",
+                text: "Подробнее",
+                icon: "info", 
+                attrs: {"data-modal-open": 'service-modal-' ~ index},
+                full_width: true
+            }   %}
+        </div>
+    </div>
+</article>

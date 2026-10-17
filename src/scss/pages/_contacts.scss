@@ -1,0 +1,21 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.contacts {
+  @include mixins.section-spacing;
+  background-color: variables.$color-bg-page;
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: variables.$space-xl;
+
+    @include mixins.respond("tablet") {
+      grid-template-columns: 1fr;
+    }
+
+    @include mixins.respond("mobile") {
+      gap: variables.$space-lg;
+    }
+  }
+}

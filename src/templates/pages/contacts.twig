@@ -1,0 +1,24 @@
+{% extends "layouts/base.twig" %}
+{% block title %}Контакты и запись на приём{% endblock %}
+{% block page %}
+    <section class="contacts">
+        <div class="container">
+            {% include "components/section-heading.twig" with {
+            label:"Контакты и запись",
+            title: "Как записаться на приём или связаться с нами?",
+            description: "Заполните онлайн-заявку для бронирования удобного времени либо свяжитесь с дежурным администратором напрямую. Мы работаем 24/7 без перерывов."
+        }  %}
+
+            <div class="contacts__grid">
+                {% include "components/information.twig" %}
+                {% include "components/booking.twig" %}
+            </div>
+        </div>
+    </section>
+
+
+
+
+{% endblock %}
+{% block modal %}
+{% endblock %}

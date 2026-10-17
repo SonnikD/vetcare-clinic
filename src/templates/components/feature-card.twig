@@ -1,0 +1,15 @@
+<article class="feature-card">
+    <div class="feature-card__icon">
+        {% include "components/icon.twig" with { name: icon } %}
+    </div>
+
+    <div class="feature-card__content">
+        <h2 class="feature-card__title">{{ title }}</h2>
+        <p class="feature-card__description">{{ description }}</p>
+    </div>
+
+    <div class="feature-card__badge">
+        {% include "components/icon.twig" with { name: "feature" } %}
+        <span class="feature-card__badge-text">Стандарт качества</span>
+    </div>
+</article>

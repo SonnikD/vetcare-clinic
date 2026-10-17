@@ -1,0 +1,61 @@
+{% extends "layouts/base.twig" %}
+{% set doctors = [
+    { 
+        experience: "14", 
+        img: "img/photos/doctors_elena-smirnova.webp",
+        name: "Елена Смирнова", 
+        specialty: "Главный врач, терапевт", 
+        description: "Специализируется на общей терапии, эндокринологии и превентивной медицине мелких домашних животных.", 
+        education: "МГАВМиБ им. К.И. Скрябина, регулярный участник ветеринарных конгрессов NVC.", 
+        specializations: [
+            "Терапия",
+            "Эндокринология",
+            "Вакцинопрофилактика"
+        ]
+    },
+    { 
+        experience: "11", 
+        img: "img/photos/doctors_mihail-voronov.webp",
+        name: "Михаил Воронов", 
+        specialty: "Ведущий хирург, травматолог", 
+        description: "Эксперт в области абдоминальной хирургии, остеосинтеза и экстренной полостной помощи.", 
+        education: "СПбГУВМ, курсы продвинутой хирургии мягких тканей и ортопедии.", 
+        specializations: [
+            "Абдоминальная хирургия",
+            "Ортопедия",
+            "Травматология"
+        ]
+    },
+    { 
+        experience: "18", 
+        img: "img/photos/doctors_anna-sokolova.webp",
+        name: "Анна Соколова", 
+        specialty: "Кардиолог, врач УЗИ-диагностики", 
+        description: "Проводит экспертную эхокардиографию, УЗИ внутренних органов и подбирает терапию болезней сердца.", 
+        education: "РУДН (ветеринария), сертификация по ультразвуковой диагностике животных.", 
+        specializations: [
+            "ЭхоКГ",
+            "УЗИ внутренних органов",
+            "Кардиология"
+        ]
+    },
+] %}
+
+{% block title %}Наши врачи{% endblock %}
+{% block page %}
+    <section class="doctors">
+        <div class="container">
+            {% include "components/section-heading.twig" with {
+            label:"Наша команда",
+            title: "Врачи, которым доверяют здоровье питомцев",
+            description: "Каждый специалист нашей клиники обладает многолетней практикой, регулярно проходит повышение квалификации и придерживается доказательных стандартов лечения."
+        }  %}
+
+            <div class="doctors__cards">
+                {% for doctor in doctors %}
+                    {% include "components/doctor-card.twig" with doctor %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+{% endblock %}

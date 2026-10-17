@@ -1,0 +1,94 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.service-card {
+  @include mixins.card;
+
+  overflow: hidden;
+
+  &--hidden {
+    display: none;
+  }
+
+  &:hover {
+    .service-card__image {
+      transform: scale(1.1);
+    }
+  }
+
+  &__media {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    @include mixins.transition(transform);
+
+    width: 100%;
+    height: 208px;
+    object-fit: cover;
+  }
+
+  &__tag {
+    @include mixins.overlay-badge(
+      $color: variables.$color-text-inverse,
+      $bg: variables.$color-bg-overlay-dark
+    );
+
+    position: absolute;
+    top: variables.$overlay-offset;
+    left: variables.$overlay-offset;
+  }
+
+  &__duration {
+    @include mixins.overlay-badge();
+
+    position: absolute;
+    bottom: variables.$overlay-offset;
+    right: variables.$overlay-offset;
+  }
+
+  &__content {
+    padding: variables.$space-xl;
+
+    @include mixins.respond("mobile") {
+      padding: variables.$space-lg;
+    }
+  }
+
+  &__title {
+    font-size: variables.$text-lg;
+    color: variables.$color-text-primary;
+    padding-bottom: variables.$space-sm;
+  }
+
+  &__description {
+    font-size: variables.$text-sm;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+    padding-bottom: variables.$space-lg;
+  }
+
+  &__footer {
+    padding-top: variables.$space-lg;
+    border-top: 1px solid variables.$color-divider;
+  }
+
+  &__price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: variables.$space-lg;
+
+    &-label {
+      font-size: variables.$text-xs;
+      font-weight: 500;
+      color: variables.$color-text-muted;
+    }
+
+    &-value {
+      font-size: variables.$text-lg;
+      font-weight: 700;
+    }
+  }
+}
