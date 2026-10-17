@@ -1,0 +1,89 @@
+<footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <a class="footer__logo" href="index.html">
+                    <div class="footer__logo-icon">
+                        {% include "components/icon.twig" with {
+                    name: "logo"
+                }  %}
+                    </div>
+                    <span class="footer__logo-text">VetCare</span>
+                </a>
+        
+                <p class="footer__description">Современная ветеринарная клиника доказательной медицины. Экспертная забота о кошках, собаках и экзотических животных 24 часа в сутки.</p>
+        
+                <div class="footer__links">
+                    <a class="footer__links-item" href="#" aria-label="Telegram">
+                        {% include "components/icon.twig" with {
+                    name: "telegram"
+                }  %}
+                    </a>
+                    <a class="footer__links-item" href="#" aria-label="VK">
+                        {% include "components/icon.twig" with {
+                    name: "vk"
+                }  %}
+                    </a>
+                </div>
+            </div>
+
+            <nav class="footer__nav" aria-label="Дополнительная навигация">
+                <h3 class="footer__title">Навигация</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="services.html">Услуги и цены</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="about.html">О клинике и стандарты</a>          
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="doctors.html">Наши врачи</a>            
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="reviews.html">Отзывы пациентов</a>            
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="contacts.html">Контакты</a>      
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты и приём</h3>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        {% include "components/icon.twig" with {
+                         name: 'phone'
+                    }  %}
+                        <a class="footer__contacts-link" href="tel:+74951234567">+7 (495) 123-45-67</a>
+
+                    </li>
+                    <li class="footer__contacts-item">
+                        {% include "components/icon.twig" with {
+                         name: 'mail'
+                    }  %}
+                        <a class="footer__contacts-link" href="mailto:info@vetcare.ru">info@vetcare.ru</a>          
+                    </li>
+                    <li class="footer__contacts-item">
+                        {% include "components/icon.twig" with {
+                         name: 'map'
+                    }  %}
+                        г. Уфа, ул. Лесной проезд, 1  
+                    </li>
+                    <li class="footer__contacts-item">
+                        {% include "components/icon.twig" with {
+                         name: 'clock'
+                    }  %}
+                        Ежедневно и круглосуточно: 24/7         
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+                 
+        <div class="footer__legal">
+            <p class="footer__legal-copyright">© {{ now|date('Y') }} VetCare. Все права защищены.</p>
+            <a class="footer__legal-privacy" href="#">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>

@@ -1,8 +1,26 @@
-{% if href %}
-    <a class="button button--{{ variant }}" href="{{ href }}">{{ text }}</a>
-{% else %}
-    <button class="button button--{{ variant }}" type="{{ type|default('button') }}">
-        {{ text }}
-    </button>
+{% set attrs = attrs|default({}) %}
+{% set element = href ? 'a' : 'button' %}
+
+{% set classes = 'button button--' ~ variant|default('primary') %}
+{% if icon_right %}{% set classes = classes ~ ' button--icon-right' %}{% endif %}
+{% if full_width %}{% set classes = classes ~ ' button--full-width' %}{% endif %}
+{% if large %}{% set classes = classes ~ ' button--large' %}{% endif %}
+
+<{{ element }}
+class="{{ classes }}"
+{% for key, value in attrs %}
+    {{ key }}="{{ value }}"
+{% endfor %}
+{% if href %}href="{{ href }}"{% endif %}
+{% if element == 'button' %}type="{{ type|default('button') }}"{% endif %}
+>
+{% if icon %}
+    {% include "components/icon.twig" with { name: icon } only %}
 {% endif %}
+{{ text }}
+</{{ element }}>
+
+
+
+
 

@@ -1,0 +1,63 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.button {
+  @include mixins.transition(color, background-color);
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: variables.$space-md variables.$space-lg;
+  border-radius: variables.$radius-sm;
+  gap: variables.$space-sm;
+  font-size: variables.$text-sm;
+  color: variables.$color-text-button;
+  font-family: variables.$font-body;
+  font-weight: 600;
+
+  svg {
+    width: variables.$icon-sm;
+    height: variables.$icon-sm;
+  }
+
+  &--primary {
+    background-color: variables.$color-bg-button;
+
+    &:hover {
+      background-color: variables.$color-bg-button-hover;
+    }
+  }
+
+  &--secondary {
+    background-color: variables.$color-bg-surface;
+    border: 1px solid variables.$color-border-default;
+
+    &:hover {
+      background-color: variables.$color-bg-button-muted-hover;
+      color: variables.$color-text-button;
+    }
+  }
+
+  &--muted {
+    background-color: variables.$color-bg-button-muted;
+    color: variables.$color-text-button-inverse;
+    border: 1px solid variables.$color-border-default;
+
+    &:hover {
+      background-color: variables.$color-bg-button-muted-hover;
+    }
+  }
+
+  &--icon-right {
+    flex-direction: row-reverse;
+  }
+
+  &--full-width {
+    width: 100%;
+  }
+
+  &--large {
+    padding: variables.$space-lg variables.$space-xl;
+    font-size: variables.$text-base;
+  }
+}

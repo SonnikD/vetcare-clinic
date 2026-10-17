@@ -1,0 +1,10 @@
+{% set attrs = attrs|default({}) %}
+
+<button
+    {% for key, value in attrs %}
+    {{ key }}="{{ value }}"
+    {% endfor %}
+    class="tag {% if active %}tag--active{% endif %}"
+    aria-pressed="{{ active ? true : "false" }}"
+    type="button"
+>{{ text }}</button>

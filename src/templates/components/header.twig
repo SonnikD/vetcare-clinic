@@ -1,49 +1,81 @@
 <header class="header"> 
-    <div class="header__logo">
-        <a href="/">
+    <div class="header__inner container">
+        <a class="header__logo" href="index.html">
             <div class="header__logo-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
-                </svg>
+                {% include "components/icon.twig" with {
+                    name: "logo"
+                }  %}
             </div>
             <div class="header__logo-info">
                 <span class="header__logo-text">VetCare</span>
                 <span class="header__logo-subtitle">Ветклиника 24/7</span>
             </div>
         </a>
-    </div>
-    <nav class="header__nav">
-        <ul class="header__nav-list">
-            <li class="header__nav-item">
-                <a href="#">Услуги</a>
-            </li>
-            <li class="header__nav-item">
-                <a href="#">О клинике</a>
-            </li>
-            <li class="header__nav-item">
-                <a href="#">Врачи</a>
-            </li>
-            <li class="header__nav-item">
-                <a href="#">Отзывы</a>
-            </li>
-            <li class="header__nav-item">
-                <a href="#">Контакты</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="header__actions">
-        <a class="header__phone" href="tel:">
-            <div class="header__phone-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
-                </svg>
+       
+        <nav class="header__nav" id="main-nav" aria-label="Основная навигация">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="services.html">Услуги</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="about.html">О клинике</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="doctors.html">Врачи</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="reviews.html">Отзывы</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+
+
+            <div class="header__nav-actions">
+                <div class="header__phone">
+                    <div class="header__phone-icon">
+                        {% include "components/icon.twig" with {name: "phone"} %}
+                    </div>
+                    <div class="header__phone-content">       
+                        <span class="header__phone-label">Телефон</span>
+                        <a class="header__phone-value" href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    </div>
+                </div>
+                {% include "components/button.twig" with {
+                variant: "primary",
+                text: "Записаться",
+                href: "contacts.html#booking",
+                icon: 'calendar',
+                attrs: {"data-modal-open": "booking-modal"},
+                large: true
+            }  %}
             </div>
-            <span class="header__phone-text">+7 (000) 000-00-00</span>
-        </a>
-        {% include "components/button.twig" with {
-            variant: "primary",
-            text: "Записаться",
-            href: "contacts.html"
-        } %}
+        </nav>
+       
+        <div class="header__actions">
+            <a class="header__phone" href="tel:+74951234567">
+                <div class="header__phone-icon">
+                    {% include "components/icon.twig" with {
+                        name: "phone"
+                    }  %}
+                </div>
+                <span class="header__phone-text">+7 (495) 123-45-67</span>
+            </a>
+            {% include "components/button.twig" with {
+                variant: "primary",
+                text: "Записаться",
+                href: "contacts.html#booking",
+                icon: 'calendar',
+                attrs: {"data-modal-open": "booking-modal"},
+            }  %}
+        </div>
+
+        <button class="header__burger" aria-controls="main-nav" aria-expanded="false" type="button" aria-label="Меню"> 
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
+    
     </div>
 </header>

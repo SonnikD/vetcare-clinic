@@ -1,0 +1,153 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.footer {
+  background-color: variables.$color-bg-inverse;
+  padding: variables.$space-3xl 0;
+
+  @include mixins.respond("tablet") {
+    padding: variables.$space-2xl 0;
+  }
+}
+
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: variables.$space-3xl;
+  gap: variables.$space-3xl;
+  border-bottom: 1px solid variables.$color-divider-inverse;
+
+  @include mixins.respond("tablet") {
+    justify-content: normal;
+    flex-wrap: wrap;
+  }
+}
+
+.footer__brand {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-lg;
+}
+
+.footer__logo {
+  display: flex;
+  gap: variables.$space-md;
+
+  &-icon {
+    @include mixins.icon-box(
+      $color: variables.$color-icon-inverse,
+      $bg: variables.$color-bg-brand
+    );
+  }
+
+  &-text {
+    font-size: variables.$text-2xl;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+    color: variables.$color-text-inverse;
+  }
+}
+
+.footer__description {
+  max-width: 40ch;
+  text-wrap: balance;
+  color: variables.$color-text-muted;
+  font-size: variables.$text-sm;
+  line-height: 1.6;
+}
+
+.footer__links {
+  display: flex;
+  gap: variables.$space-md;
+
+  &-item {
+    @include mixins.flex-center;
+    @include mixins.transition(background-color);
+
+    color: variables.$color-icon-subtle;
+    background-color: variables.$color-bg-icon-button;
+    border-radius: variables.$radius-xs;
+    width: 36px;
+    height: 36px;
+
+    svg {
+      width: variables.$icon-sm;
+      height: variables.$icon-sm;
+    }
+
+    &:hover {
+      color: variables.$color-text-button-inverse;
+      background-color: variables.$color-bg-icon;
+    }
+  }
+}
+
+.footer__title {
+  font-family: variables.$font-heading;
+  font-size: variables.$text-sm;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: variables.$color-text-inverse;
+  letter-spacing: 0.7px;
+  padding-bottom: variables.$space-lg;
+}
+
+.footer__nav-list,
+.footer__contacts-list {
+  display: flex;
+  flex-direction: column;
+  gap: variables.$space-md;
+}
+
+.footer__nav-item,
+.footer__contacts-item {
+  font-size: variables.$text-sm;
+  color: variables.$color-text-muted;
+
+  svg {
+    width: variables.$icon-sm;
+    height: variables.$icon-sm;
+  }
+}
+
+.footer__nav-link,
+.footer__contacts-link {
+  @include mixins.transition(color);
+
+  &:hover {
+    color: variables.$color-border-hover;
+  }
+}
+
+.footer__contacts-item {
+  display: flex;
+  align-items: center;
+  gap: variables.$space-md;
+
+  & svg {
+    color: variables.$color-icon-brand;
+  }
+}
+
+.footer__legal {
+  display: flex;
+  justify-content: space-between;
+  color: variables.$color-text-muted;
+  font-size: variables.$text-xs;
+  font-weight: 300;
+  padding-top: variables.$space-2xl;
+
+  &-privacy {
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  @include mixins.respond("tablet") {
+    flex-direction: column;
+    align-items: center;
+    gap: variables.$space-md;
+  }
+}

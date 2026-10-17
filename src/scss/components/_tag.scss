@@ -1,0 +1,32 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.tag {
+  @include mixins.transition(background-color);
+
+  display: inline-flex;
+  align-items: center;
+  padding: variables.$space-sm variables.$space-lg;
+  border-radius: variables.$radius-sm;
+  border: 1px solid variables.$color-border-default;
+  font-size: variables.$text-sm;
+  font-weight: 600;
+  font-family: variables.$font-body;
+  color: variables.$color-text-button-inverse;
+  background-color: variables.$color-bg-surface;
+
+  &:hover {
+    color: variables.$color-text-button;
+    background-color: variables.$color-bg-button-muted-hover;
+  }
+
+  &--active {
+    color: variables.$color-text-inverse;
+    background-color: variables.$color-bg-filter-active;
+
+    &:hover {
+      color: variables.$color-text-inverse;
+      background-color: variables.$color-bg-filter-active-hover;
+    }
+  }
+}

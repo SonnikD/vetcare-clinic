@@ -1,0 +1,45 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+.section-heading {
+  @include mixins.flex-center;
+
+  text-align: center;
+  max-width: 768px;
+  flex-direction: column;
+  padding-bottom: variables.$space-3xl;
+  margin: 0 auto;
+
+  @include mixins.respond("tablet") {
+    padding-bottom: variables.$space-2xl;
+  }
+
+  &__label {
+    font-size: variables.$text-sm;
+    font-weight: 600;
+    line-height: 1.4;
+    text-transform: uppercase;
+    color: variables.$color-text-secondary;
+
+    @include mixins.respond("mobile") {
+      font-size: variables.$text-xs;
+    }
+  }
+
+  &__title {
+    font-size: clamp(1.5rem, 0.75rem + 1.875vw, 2.25rem);
+    color: variables.$color-text-primary;
+    padding-bottom: variables.$space-lg;
+  }
+
+  &__description {
+    font-size: variables.$text-lg;
+    color: variables.$color-text-body;
+    line-height: 1.6;
+    text-align: center;
+
+    @include mixins.respond("mobile") {
+      font-size: variables.$text-base;
+    }
+  }
+}

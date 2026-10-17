@@ -1,0 +1,20 @@
+@use "../base/variables";
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+
+  &__value {
+    font-size: variables.$text-2xl;
+    font-family: variables.$font-heading;
+    font-weight: 700;
+    color: variables.$color-text-secondary;
+  }
+
+  &__label {
+    font-size: variables.$text-xs;
+    font-family: variables.$font-body;
+    font-weight: 500;
+    color: variables.$color-text-body;
+  }
+}
