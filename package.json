@@ -1,13 +1,13 @@
 {
-  "name": "twig-practice",
+  "name": "vetcare-clinic",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Сайт ветеринарной клиники VetCare",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "gulp dev",
+    "build": "gulp build"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Sofya Kozlova",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.6.1",

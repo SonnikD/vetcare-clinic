@@ -20,11 +20,21 @@ function scss() {
     .pipe(dest("dist/css"));
 }
 
+function images() {
+  return src("src/img/**/*.{jpg,png,svg,gif,ico,webp,avif}", {
+    encoding: false,
+  }).pipe(dest("dist/img/"));
+}
+
+function js() {
+  return src("src/js/**/*.js").pipe(dest("dist/js/"));
+}
+
 function clean() {
   return del("dist");
 }
 
-const build = series(clean, parallel(html, scss));
+const build = series(clean, parallel(html, scss, images, js));
 
 function reload(done) {
   browserSync.reload();
@@ -34,6 +44,11 @@ function reload(done) {
 function watchFiles() {
   watch(["src/templates/**/*.twig"], series(html, reload));
   watch(["src/scss/**/*.scss"], series(scss, reload));
+  watch(
+    ["src/img/**/*.{jpg,png,svg,gif,ico,webp,avif}"],
+    series(images, reload),
+  );
+  watch(["src/js/**/*.js"], series(js, reload));
 }
 
 function serve() {
@@ -41,8 +56,13 @@ function serve() {
   watchFiles();
 }
 
+const dev = series(build, serve);
+
 exports.html = html;
 exports.scss = scss;
+exports.js = js;
 exports.build = build;
+exports.dev = dev;
 exports.watchFiles = watchFiles;
 exports.serve = serve;
+exports.default = dev;
