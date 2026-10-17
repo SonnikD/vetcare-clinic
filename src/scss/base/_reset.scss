@@ -41,6 +41,11 @@ textarea {
   border: none;
 }
 
+input,
+textarea {
+  cursor: text;
+}
+
 ul,
 ol {
   list-style: none;

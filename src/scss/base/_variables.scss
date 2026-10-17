@@ -1,61 +1,139 @@
-// $color-white1: #f9fefd; // фон раскрытого блока с вопросом в "faq"
-// $backgroundcolor-header: #f9f9f5;
-
 // Примитивы
-// Teal (бирюзовый/мятный)
-$teal-100: #ccfbf1; // текст в cta (описание), а заголовок там белый
-$teal-300: #5eead4; // border раскрытого блока с вопросом в "faq", цвет border карточки при hover
-$teal-600: #0d9488; // фон логотипа, все иконки на сайте
-$teal-700: #0f766e; // текста в шапке "ВЕТКЛИНИКА 24/8", цвет заголовков "О нашей клинике", "Каталог услуг" и т.д., активная кнопка в фильтрах, например "Все услуги" или "Диагностика".
-$teal-900: #134e4a; // фон cta-block
+// Teal
+$teal-100: #ccfbf1;
+$teal-300: #5eead4;
+$teal-600: #0d9488;
+$teal-700: #0f766e;
+$teal-900: #134e4a;
 
-// Amber (жёлтый акцент)
-$amber-300: #fcd34d; // hover основной кнопки
-$amber-400: #fbbf24; // основной цвет кнопки
+// Amber
+$amber-100: #fef3c7;
+$amber-300: #fcd34d;
+$amber-400: #fbbf24;
+$amber-800: #92400e;
 
-// Sand (тёплый песочно-серый)
-$sand-50: #fcfbfa; // фон нераскрытого блока с вопросом в "faq"
-$sand-200: #eeebe5; // фон иконки в faq, если фон серый, фон кнопки белой при hover, цвет фона кнопки серой при hover
-$sand-300: #e9e5dc; // border нераскрытого блока с вопросом в "faq", цвет border у белой кнопки, цвет border у серой кнопки
-$sand-500: #b8afa0; // текст в футере
-$sand-700: #4f473c; // иконка в лого/в faq, если фон серый, цвет текста обычного, цвет текста белой кнопки
+// Sand
+$sand-50: #fcfbfa;
+$sand-200: #eeebe5;
+$sand-300: #e9e5dc;
+$sand-500: #b8afa0;
+$sand-700: #4f473c;
 
 // Нейтральные
-$white: #ffffff; // иконка в лого/в faq, если фон зеленый
-$cream: #faf9f6; // фон шапки, фон страницы где-то такой, а где-то просто #fff
-$ink: #12100d; // заголовок, текст кнопки, цены, фон тега на картинке, вопрос в faq, фон футера
+$white: #ffffff;
+$cream: #faf9f6;
+$ink: #12100d;
 
 // Семантика
 // ---------- Background ----------
-$color-bg-page: $cream; // фон страницы
-$color-bg-header: $cream; // фон шапки
-$color-bg-surface: $white; // белые блоки/карточки
-$color-bg-muted: $sand-50; // нераскрытый faq
-$color-bg-icon: $sand-200; // фон иконки в faq
-$color-bg-accent: $teal-900; // фон CTA-блока
-$color-bg-brand: $teal-600; // фон лого
-$color-bg-inverse: $ink; // фон футера, фон тега
-$color-bg-button: $amber-400; // основная кнопка
-$color-bg-button-hover: $amber-300; // hover основной кнопки
-$color-bg-button-muted-hover: $sand-200; // hover серой кнопки
-$color-bg-filter-active: $teal-700; // фон кнопки фильтра активной
+$color-bg-page: $cream;
+$color-bg-header: $cream;
+$color-bg-surface: $white;
+$color-bg-muted: $sand-50;
+$color-bg-accent: $teal-900;
+$color-bg-brand: $teal-600;
+$color-bg-inverse: $ink;
+$color-bg-button: $amber-400;
+$color-bg-button-hover: $amber-300;
+$color-bg-button-muted: $cream;
+$color-bg-button-muted-hover: $sand-200;
+$color-bg-filter-active: $teal-700;
+$color-bg-filter-active-hover: $teal-600;
+$color-bg-icon-button: $sand-700;
+$color-bg-icon: $sand-200;
+$color-bg-icon-accent: $teal-100;
+$color-bg-icon-price: $amber-100;
+$color-bg-overlay-dark: color-mix(in oklab, $ink 60%, transparent);
+$color-bg-overlay-light: color-mix(
+  in oklab,
+  $color-bg-surface 70%,
+  transparent
+);
 
 // ---------- Text ----------
-$color-text-primary: $ink; // заголовки, цены, вопрос в faq
-$color-text-secondary: $teal-700; // подзаголовок "ВЕТКЛИНИКА 24/7", заголовки секций
-$color-text-muted: $sand-500; // текст в футере
-$color-text-body: $sand-700; // обычный текст
-$color-text-inverse: $white; // текст на тёмном фоне (CTA, футер)
-$color-text-accent: $teal-100; // описание в CTA
-$color-text-button: $ink; // текст кнопки
-$color-text-button-inverse: $sand-700; // текст белой кнопки
+$color-text-primary: $ink;
+$color-text-secondary: $teal-700;
+$color-text-muted: $sand-500;
+$color-text-body: $sand-700;
+$color-text-inverse: $white;
+$color-text-accent: $teal-100;
+$color-text-button: $ink;
+$color-text-button-inverse: $sand-700;
 
 // ---------- Icon ----------
-$color-icon-brand: $teal-600; // все иконки на сайте
-$color-icon-inverse: $white; // иконка в лого/faq на зелёном
-$color-icon-muted: $sand-700; // иконка в лого/faq на сером
+$color-icon-brand: $teal-600;
+$color-icon-inverse: $white;
+$color-icon-accent: $amber-400;
+$color-icon-subtle: $sand-300;
+$color-icon-price: $amber-800;
 
 // ---------- Border ----------
-$color-border-default: $sand-300; // border нераскрытого faq, белой и серой кнопки
-$color-border-hover: $teal-300; // border карточки при hover
-$color-border-accent: $teal-300; // border раскрытого faq
+$color-border-default: $sand-300;
+$color-border-hover: $teal-300;
+$color-border-accent: $teal-300;
+
+// ---------- Divider ----------
+$color-divider: color-mix(in oklab, $color-border-default 50%, transparent);
+$color-divider-inverse: color-mix(in oklab, $color-text-body 50%, transparent);
+
+// ---------- Icon sizes ----------
+$icon-xs: 14px;
+$icon-sm: 16px;
+$icon-md: 20px;
+$icon-lg: 24px;
+$icon-xl: 32px;
+
+// ---------- Typography ----------
+$font-heading: "Manrope", "Segoe UI", Roboto, sans-serif;
+$font-body: "Onest", "Segoe UI", Roboto, sans-serif;
+
+// ---------- Font size ----------
+$text-xs: 0.75rem; // 12px
+$text-sm: 0.875rem; // 14px
+$text-base: 1rem; // 16px
+$text-lg: 1.125rem; // 18px
+$text-xl: 1.25rem; // 20px
+$text-2xl: 1.5rem; // 24px
+
+// ---------- Shadow ----------
+$shadow-card: 0 8px 24px rgba(18, 16, 13, 0.12);
+
+// ---------- Breakpoints ----------
+$tablet: 1024px;
+$mobile: 640px;
+
+// ---------- Radius ----------
+$radius-xs: 8px;
+$radius-sm: 12px;
+$radius-md: 16px;
+$radius-lg: 24px;
+
+// ---------- Layout ----------
+$container-max-width: 1280px;
+
+// ---------- Section ----------
+$section-padding-desktop: 60px;
+$section-padding-tablet: 32px;
+
+// ---------- Overlay ----------
+$overlay-offset: 12px;
+
+// ---------- Spacing ----------
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 12px;
+$space-lg: 16px;
+$space-xl: 24px;
+$space-2xl: 32px;
+$space-3xl: 48px;
+
+// ---------- Effects  ----------
+$blur-overlay: 12px;
+$transition-duration: 0.3s;
+$transition-easing: ease-in-out;
+$gradient-overlay: linear-gradient(
+  to top in oklab,
+  color-mix(in oklab, $ink 80%, transparent) 0%,
+  color-mix(in oklab, $ink 30%, transparent) 50%,
+  transparent 100%
+);

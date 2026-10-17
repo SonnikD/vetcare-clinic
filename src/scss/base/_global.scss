@@ -1,0 +1,57 @@
+@use "../base/variables";
+@use "../base/mixins";
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  font-family: variables.$font-body;
+  font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body:has(dialog[open]) {
+  overflow: hidden;
+}
+
+dialog {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  overflow-y: auto;
+}
+
+main {
+  flex: 1;
+}
+
+h1,
+h2,
+h3 {
+  font-family: variables.$font-heading;
+  font-weight: 700;
+}
+
+.container {
+  max-width: variables.$container-max-width;
+  margin-inline: auto;
+  padding-inline: variables.$space-2xl;
+
+  @include mixins.respond("tablet") {
+    padding-inline: variables.$space-xl;
+  }
+
+  @include mixins.respond("mobile") {
+    padding-inline: variables.$space-lg;
+  }
+}
+
+figure,
+blockquote {
+  margin: 0;
+}

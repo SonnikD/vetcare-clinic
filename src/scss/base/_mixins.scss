@@ -1,0 +1,111 @@
+@use "sass:list";
+@use "../base/variables";
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == "mobile" {
+    @media (max-width: variables.$mobile) {
+      @content;
+    }
+  } @else if $breakpoint == "tablet" {
+    @media (max-width: variables.$tablet) {
+      @content;
+    }
+  } @else {
+    @error "Неизвестный брейкпоинт: #{$breakpoint}. Доступные: mobile, tablet.";
+  }
+}
+
+@mixin grid-card(
+  $columns,
+  $columns-tablet: 2,
+  $columns-mobile: 1,
+  $gap: variables.$space-xl
+) {
+  display: grid;
+  grid-template-columns: repeat($columns, minmax(0, 1fr));
+  gap: $gap;
+
+  @include respond("tablet") {
+    grid-template-columns: repeat($columns-tablet, minmax(0, 1fr));
+  }
+
+  @include respond("mobile") {
+    grid-template-columns: repeat($columns-mobile, minmax(0, 1fr));
+  }
+}
+
+@mixin section-spacing {
+  padding: variables.$section-padding-desktop 0;
+
+  @include respond("tablet") {
+    padding: variables.$section-padding-tablet 0;
+  }
+}
+
+@mixin overlay-badge(
+  $color: variables.$color-text-primary,
+  $bg: variables.$color-bg-overlay-light
+) {
+  font-weight: 600;
+  padding: variables.$space-xs variables.$space-md;
+  font-size: variables.$text-xs;
+  backdrop-filter: blur(variables.$blur-overlay);
+  border-radius: variables.$radius-xs;
+  color: $color;
+  background-color: $bg;
+}
+
+@mixin icon-box(
+  $color: variables.$color-icon-brand,
+  $bg: variables.$color-bg-icon-accent
+) {
+  @include flex-center;
+  width: 40px;
+  height: 40px;
+  border-radius: variables.$radius-sm;
+  color: $color;
+  background-color: $bg;
+
+  svg {
+    width: variables.$icon-md;
+    height: variables.$icon-md;
+  }
+}
+
+@mixin transition($properties...) {
+  $result: ();
+  @each $property in $properties {
+    $result: list.append(
+      $result,
+      #{$property variables.$transition-duration variables.$transition-easing},
+      comma
+    );
+  }
+  transition: $result;
+}
+
+@mixin card(
+  $bg: variables.$color-bg-surface,
+  $radius: variables.$radius-md,
+  $hover: true
+) {
+  @include transition(border-color, box-shadow);
+  display: flex;
+  flex-direction: column;
+  border-radius: $radius;
+  border: 1px solid variables.$color-border-default;
+  background-color: $bg;
+
+  @if $hover {
+    &:hover {
+      border-color: variables.$color-border-accent;
+      box-shadow: variables.$shadow-card;
+    }
+  }
+}

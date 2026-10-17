@@ -1,24 +1,27 @@
 @use "base/reset";
 @use "base/variables";
-@use "base/fonts";
+@use "base/mixins";
 @use "base/global";
 
+@use "components/booking";
 @use "components/button";
 @use "components/cta-block";
 @use "components/doctor-card";
-@use "components/faq-item";
 @use "components/feature-card";
 @use "components/footer";
 @use "components/header";
+@use "components/information";
 @use "components/review-card";
 @use "components/section-heading";
 @use "components/service-card";
 @use "components/stat-item";
 @use "components/tag";
+@use "components/modal";
+@use "components/service-details";
 
 @use "pages/about";
 @use "pages/contacts";
 @use "pages/doctors";
-@use "pages/home";
+@use "pages/index";
 @use "pages/reviews";
 @use "pages/services";
