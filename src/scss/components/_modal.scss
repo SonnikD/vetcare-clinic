@@ -4,6 +4,12 @@
 .modal {
   &__inner {
     position: relative;
+    display: flex;
+    min-height: 100%;
+
+    & > * {
+      flex: 1;
+    }
   }
 
   &__close {

@@ -59,6 +59,7 @@
     flex-direction: column;
     gap: variables.$space-lg;
     padding: variables.$space-2xl;
+    flex: 1;
   }
 
   &__summary {
@@ -180,5 +181,6 @@
     padding-top: variables.$space-lg;
     text-align: end;
     border-top: 1px solid variables.$color-divider;
+    margin-top: auto;
   }
 }
