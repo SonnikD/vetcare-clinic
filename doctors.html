@@ -1,0 +1,958 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Современная ветеринарная клиника VetCare: бережный приём, УЗИ, вакцинация, стоматология и хирургия для кошек и собак. Работаем круглосуточно 24/7.">
+        <title>Наши врачи — VetCare</title>
+        <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Onest:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        
+        <header class="header"> 
+    <div class="header__inner container">
+        <a class="header__logo" href="index.html">
+            <div class="header__logo-icon">
+                
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+
+    
+</svg>
+
+            </div>
+            <div class="header__logo-info">
+                <span class="header__logo-text">VetCare</span>
+                <span class="header__logo-subtitle">Ветклиника 24/7</span>
+            </div>
+        </a>
+       
+        <nav class="header__nav" id="main-nav" aria-label="Основная навигация">
+            <ul class="header__nav-list">
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="services.html">Услуги</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="about.html">О клинике</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="doctors.html">Врачи</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="reviews.html">Отзывы</a>
+                </li>
+                <li class="header__nav-item">
+                    <a class="header__nav-link" href="contacts.html">Контакты</a>
+                </li>
+            </ul>
+
+
+            <div class="header__nav-actions">
+                <div class="header__phone">
+                    <div class="header__phone-icon">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+
+    
+</svg>
+
+                    </div>
+                    <div class="header__phone-content">       
+                        <span class="header__phone-label">Телефон</span>
+                        <a class="header__phone-value" href="tel:+74951234567">+7 (495) 123-45-67</a>
+                    </div>
+                </div>
+                
+
+
+
+
+
+
+
+<a
+class="button button--primary button--large"
+
+    data-modal-open="booking-modal"
+
+href="contacts.html#booking"
+
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Записаться
+</a>
+
+
+
+
+
+
+            </div>
+        </nav>
+       
+        <div class="header__actions">
+            <a class="header__phone" href="tel:+74951234567">
+                <div class="header__phone-icon">
+                    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+
+    
+</svg>
+
+                </div>
+                <span class="header__phone-text">+7 (495) 123-45-67</span>
+            </a>
+            
+
+
+
+
+
+
+
+<a
+class="button button--primary"
+
+    data-modal-open="booking-modal"
+
+href="contacts.html#booking"
+
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Записаться
+</a>
+
+
+
+
+
+
+        </div>
+
+        <button class="header__burger" aria-controls="main-nav" aria-expanded="false" type="button" aria-label="Меню"> 
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+            <span class="header__burger-line"></span>
+        </button>
+    
+    </div>
+</header>
+
+        
+        <main>
+            
+    <section class="doctors">
+        <div class="container">
+            <div class="section-heading">
+    <span class="section-heading__label">Наша команда</span>
+    <h1 class="section-heading__title">Врачи, которым доверяют здоровье питомцев</h1>
+    <p class="section-heading__description">Каждый специалист нашей клиники обладает многолетней практикой, регулярно проходит повышение квалификации и придерживается доказательных стандартов лечения.</p>
+</div>
+
+
+            <div class="doctors__cards">
+                
+                    <article class="doctor-card">
+    <div class="doctor-card__media">
+        <img class="doctor-card__image" src="img/photos/doctors_elena-smirnova.webp" alt="Елена Смирнова" loading="lazy">
+        <div class="doctor-card__experience">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+        <circle cx="12" cy="8" r="6"></circle>
+
+    
+</svg>
+ 
+            <span class="doctor-card__experience-text">Стаж 14 лет</span>
+        </div>
+    </div>
+
+    <div class="doctor-card__content">
+        <h2 class="doctor-card__name">Елена Смирнова</h2>
+        <span class="doctor-card__specialty">Главный врач, терапевт</span>
+        <p class="doctor-card__description">Специализируется на общей терапии, эндокринологии и превентивной медицине мелких домашних животных.</p>
+
+        <div class="doctor-card__education">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+        <path d="M22 10v6"></path>
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+
+    
+</svg>
+
+            <span class="doctor-card__education-text">МГАВМиБ им. К.И. Скрябина, регулярный участник ветеринарных конгрессов NVC.</span>
+        </div>
+
+        <ul class="doctor-card__specializations">
+            
+                <li class="doctor-card__specialization">Терапия</li>
+            
+                <li class="doctor-card__specialization">Эндокринология</li>
+            
+                <li class="doctor-card__specialization">Вакцинопрофилактика</li>
+            
+        </ul>
+
+        <div class="doctor-card__footer">
+            
+
+
+
+
+
+
+
+<button
+class="button button--primary button--full-width"
+
+    data-modal-open="booking-modal"
+
+
+type="button"
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Записаться к доктору
+</button>
+
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+                
+                    <article class="doctor-card">
+    <div class="doctor-card__media">
+        <img class="doctor-card__image" src="img/photos/doctors_mihail-voronov.webp" alt="Михаил Воронов" loading="lazy">
+        <div class="doctor-card__experience">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+        <circle cx="12" cy="8" r="6"></circle>
+
+    
+</svg>
+ 
+            <span class="doctor-card__experience-text">Стаж 11 лет</span>
+        </div>
+    </div>
+
+    <div class="doctor-card__content">
+        <h2 class="doctor-card__name">Михаил Воронов</h2>
+        <span class="doctor-card__specialty">Ведущий хирург, травматолог</span>
+        <p class="doctor-card__description">Эксперт в области абдоминальной хирургии, остеосинтеза и экстренной полостной помощи.</p>
+
+        <div class="doctor-card__education">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+        <path d="M22 10v6"></path>
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+
+    
+</svg>
+
+            <span class="doctor-card__education-text">СПбГУВМ, курсы продвинутой хирургии мягких тканей и ортопедии.</span>
+        </div>
+
+        <ul class="doctor-card__specializations">
+            
+                <li class="doctor-card__specialization">Абдоминальная хирургия</li>
+            
+                <li class="doctor-card__specialization">Ортопедия</li>
+            
+                <li class="doctor-card__specialization">Травматология</li>
+            
+        </ul>
+
+        <div class="doctor-card__footer">
+            
+
+
+
+
+
+
+
+<button
+class="button button--primary button--full-width"
+
+    data-modal-open="booking-modal"
+
+
+type="button"
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Записаться к доктору
+</button>
+
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+                
+                    <article class="doctor-card">
+    <div class="doctor-card__media">
+        <img class="doctor-card__image" src="img/photos/doctors_anna-sokolova.webp" alt="Анна Соколова" loading="lazy">
+        <div class="doctor-card__experience">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"></path>
+        <circle cx="12" cy="8" r="6"></circle>
+
+    
+</svg>
+ 
+            <span class="doctor-card__experience-text">Стаж 18 лет</span>
+        </div>
+    </div>
+
+    <div class="doctor-card__content">
+        <h2 class="doctor-card__name">Анна Соколова</h2>
+        <span class="doctor-card__specialty">Кардиолог, врач УЗИ-диагностики</span>
+        <p class="doctor-card__description">Проводит экспертную эхокардиографию, УЗИ внутренних органов и подбирает терапию болезней сердца.</p>
+
+        <div class="doctor-card__education">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"></path>
+        <path d="M22 10v6"></path>
+        <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"></path>
+
+    
+</svg>
+
+            <span class="doctor-card__education-text">РУДН (ветеринария), сертификация по ультразвуковой диагностике животных.</span>
+        </div>
+
+        <ul class="doctor-card__specializations">
+            
+                <li class="doctor-card__specialization">ЭхоКГ</li>
+            
+                <li class="doctor-card__specialization">УЗИ внутренних органов</li>
+            
+                <li class="doctor-card__specialization">Кардиология</li>
+            
+        </ul>
+
+        <div class="doctor-card__footer">
+            
+
+
+
+
+
+
+
+<button
+class="button button--primary button--full-width"
+
+    data-modal-open="booking-modal"
+
+
+type="button"
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Записаться к доктору
+</button>
+
+
+
+
+
+
+        </div>
+    </div>
+</article>
+
+                
+            </div>
+        </div>
+    </section>
+
+        </main>
+        
+        <footer class="footer">
+    <div class="footer__inner container">
+        <div class="footer__content">
+            <div class="footer__brand">
+                <a class="footer__logo" href="index.html">
+                    <div class="footer__logo-icon">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5"></path>
+
+    
+</svg>
+
+                    </div>
+                    <span class="footer__logo-text">VetCare</span>
+                </a>
+        
+                <p class="footer__description">Современная ветеринарная клиника доказательной медицины. Экспертная забота о кошках, собаках и экзотических животных 24 часа в сутки.</p>
+        
+                <div class="footer__links">
+                    <a class="footer__links-item" href="#" aria-label="Telegram">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+        <path d="m21.854 2.147-10.94 10.939"></path>
+
+    
+</svg>
+
+                    </a>
+                    <a class="footer__links-item" href="#" aria-label="VK">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"></path>
+
+    
+</svg>
+
+                    </a>
+                </div>
+            </div>
+
+            <nav class="footer__nav" aria-label="Дополнительная навигация">
+                <h3 class="footer__title">Навигация</h3>
+                <ul class="footer__nav-list">
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="services.html">Услуги и цены</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="about.html">О клинике и стандарты</a>          
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="doctors.html">Наши врачи</a>            
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="reviews.html">Отзывы пациентов</a>            
+                    </li>
+                    <li class="footer__nav-item">
+                        <a class="footer__nav-link" href="contacts.html">Контакты</a>      
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="footer__contacts">
+                <h3 class="footer__title">Контакты и приём</h3>
+                <ul class="footer__contacts-list">
+                    <li class="footer__contacts-item">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"></path>
+
+    
+</svg>
+
+                        <a class="footer__contacts-link" href="tel:+74951234567">+7 (495) 123-45-67</a>
+
+                    </li>
+                    <li class="footer__contacts-item">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path>
+        <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+
+    
+</svg>
+
+                        <a class="footer__contacts-link" href="mailto:info@vetcare.ru">info@vetcare.ru</a>          
+                    </li>
+                    <li class="footer__contacts-item">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path>
+        <circle cx="12" cy="10" r="3"></circle>
+
+    
+</svg>
+
+                        г. Уфа, ул. Лесной проезд, 1  
+                    </li>
+                    <li class="footer__contacts-item">
+                        
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M12 6v6l4 2"></path>
+        <circle cx="12" cy="12" r="10"></circle>
+
+    
+</svg>
+
+                        Ежедневно и круглосуточно: 24/7         
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+                 
+        <div class="footer__legal">
+            <p class="footer__legal-copyright">© 2026 VetCare. Все права защищены.</p>
+            <a class="footer__legal-privacy" href="#">Политика конфиденциальности</a>
+        </div>
+    </div>
+</footer>
+
+        
+        
+            <dialog class="modal" id="booking-modal" aria-label="Запись на приём">
+    <div class="modal__inner">
+        <button class="modal__close" type="button" aria-label="Закрыть">
+            
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    class="modal__icon"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M18 6 6 18"></path>
+        <path d="m6 6 12 12"></path>
+
+    
+</svg>
+
+        </button>
+        
+                    <section class="booking" id="booking">
+    <h2 class="booking__title">Форма записи на приём</h2>
+    <p class="booking__description">Укажите ваши контакты и выберите желаемую услугу. Мы перезвоним для согласования времени.</p>
+                
+    <form class="booking__form" action="submit" method="post"> 
+        <div class="booking__fields">
+            <div class="booking__field">
+                <label class="booking__label" for="userName">Ваше имя *</label>
+                <input class="booking__input" id="userName" name="userName" type="text" required placeholder="Иван Иванов">
+            </div>
+            <div class="booking__field">
+                <label class="booking__label" for="phone">Номер телефона *</label>
+                <input class="booking__input" id="phone" name="phone" type="tel" required placeholder="+7 (___) ___-__-__">
+            </div>
+                   
+            <div class="booking__field">
+                <label class="booking__label" for="pet">Вид питомца</label>
+                <select class="booking__select" id="pet" name="pet">
+                    <option value="dog" selected>Собака</option>
+                    <option value="cat">Кошка</option>
+                    <option value="rodent">Грызун / Кролик</option>
+                    <option value="bird">Птица / Экзотика</option>
+                    <option value="other">Другой питомец</option>
+                </select>
+            </div>
+
+            <div class="booking__field">
+                <label class="booking__label" for="service">Услуга</label>
+                <select class="booking__select" id="service" name="service">
+                    <option value="vaccination">Вакцинация и чипирование (от 1800₽)</option>
+                    <option value="grooming">Гигиенический уход и стрижка (от 2200₽)</option>
+                    <option value="ultrasound">УЗИ и экспертная диагностика (от 2500₽)</option>
+                    <option value="dentistry">Ветеринарная стоматология (от 2900₽)</option>
+                    <option value="surgery">Малоинвазивная хирургия (от 4500₽)</option>
+                    <option value="therapy">Терапевтический приём (от 1500₽)</option>
+                    <option value="duty" selected>Консультация дежурного врача</option>
+                </select>
+            </div>
+        </div>
+        <div class="booking__field">
+            <label class="booking__label" for="date">Желаемая дата приёма</label>
+            <input class="booking__input" id="date" name="date" type="date" required>
+        </div>
+
+        <div class="booking__field">
+            <label class="booking__label" for="comment">Комментарий или жалобы</label>
+            <textarea class="booking__textarea" name="comment" id="comment" placeholder="Опишите симптомы, породу питомца или удобное время для звонка..."></textarea> 
+        </div>
+                                    
+        
+
+
+
+
+
+
+
+<button
+class="button button--primary button--full-width button--large"
+
+
+type="submit"
+>
+
+    
+
+<svg
+    xmlns="http://www.w3.org/2000/svg"
+    
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="2"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+    aria-hidden="true"
+>
+    
+        <path d="M8 2v4"></path>
+        <path d="M16 2v4"></path>
+        <rect width="18" height="18" x="3" y="4" rx="2"></rect>
+        <path d="M3 10h18"></path>
+
+    
+</svg>
+
+
+Отправить заявку на приём
+</button>
+
+
+
+
+
+
+    </form>
+
+    <p class="booking__note">
+        Нажимая кнопку, вы соглашаетесь на обработку персональных данных и с
+        <a class="booking__note-link" href="privacy" target="_blank" rel="noopener">политикой конфиденциальности</a>.
+    </p>            
+</section>
+
+                
+    </div>
+</dialog>
+
+        
+        <script type="module" src="js/main.js"></script>
+    </body>
+</html>
