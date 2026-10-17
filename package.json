@@ -5,7 +5,8 @@
   "description": "Сайт ветеринарной клиники VetCare",
   "scripts": {
     "dev": "gulp dev",
-    "build": "gulp build"
+    "build": "gulp build",
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "author": "Sofya Kozlova",
   "license": "ISC",
@@ -13,6 +14,7 @@
     "autoprefixer": "^10.6.1",
     "browser-sync": "^3.0.4",
     "del": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "gulp": "^5.0.1",
     "gulp-postcss": "^10.0.0",
     "gulp-sass": "^6.0.1",
