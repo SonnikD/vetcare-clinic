@@ -3,7 +3,6 @@
 
 .booking {
   @include mixins.card($radius: variables.$radius-lg, $hover: false);
-
   padding: variables.$space-2xl;
 
   &__form {
@@ -25,7 +24,7 @@
     column-gap: variables.$space-lg;
 
     @include mixins.respond("mobile") {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
       column-gap: variables.$space-sm;
     }
   }
@@ -53,6 +52,7 @@
     border-radius: variables.$radius-sm;
     font-size: variables.$text-sm;
     font-family: inherit;
+    line-height: 1.4;
 
     &:focus-visible {
       border: 1px solid variables.$color-border-accent;
@@ -61,6 +61,14 @@
 
     &:focus {
       outline: none;
+    }
+  }
+
+  &__input[type="date"] {
+    appearance: none;
+
+    &::-webkit-date-and-time-value {
+      text-align: left;
     }
   }
 

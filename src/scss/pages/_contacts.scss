@@ -11,7 +11,7 @@
     gap: variables.$space-xl;
 
     @include mixins.respond("tablet") {
-      grid-template-columns: 1fr;
+      grid-template-columns: minmax(0, 1fr);
     }
 
     @include mixins.respond("mobile") {
